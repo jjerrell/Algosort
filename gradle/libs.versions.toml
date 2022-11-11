@@ -1,0 +1,126 @@
+[versions]
+accompanistNavigation = "0.27.0"
+compose = "1.3.0"
+composeCompiler = "1.3.2"
+composesnapshot = "-" # a single character = no snapshot
+material = "1.1.0-alpha01"
+
+# gradlePlugin and lint need to be updated together
+gradlePlugin = "7.3.1"
+lintMinCompose = "30.0.0"
+
+ktlint = "0.45.2"
+kotlin = "1.7.20"
+coroutines = "1.6.4"
+okhttp = "3.12.13"
+coil = "1.3.2"
+
+androidxtest = "1.4.0"
+androidxnavigation = "2.5.0-rc02"
+androidxWindow = "1.0.0"
+
+daggerHilt = "2.44"
+daggerHiltNavigation = "1.0.0"
+
+spotless = "6.5.2"
+
+[libraries]
+# in-use
+
+## UI
+androidx-core = "androidx.core:core-ktx:1.9.0"
+compose-androidx-activity = "androidx.activity:activity-compose:1.5.1"
+compose-material = { module = "androidx.compose.material3:material3", version.ref = "material" }
+compose-ui = { module = "androidx.compose.ui:ui", version.ref = "compose" }
+
+compose-androidx-navigation = { module = "androidx.navigation:navigation-compose", version.ref = "androidxnavigation" }
+accompanist-navigation = { module = "com.google.accompanist:accompanist-navigation-material", version.ref = "accompanistNavigation" }
+dagger-hilt-navigation = { module = "androidx.hilt:hilt-navigation-compose", version.ref = "daggerHiltNavigation" }
+
+## Dependency Injection
+dagger-hilt = { module = "com.google.dagger:hilt-android", version.ref = "daggerHilt" }
+dagger-hilt-compiler = { module = "com.google.dagger:hilt-android-compiler", version.ref = "daggerHilt" }
+
+## Test
+test-junit = "junit:junit:4.13.2"
+test-androidx-core = "androidx.test:core-ktx:1.5.0-alpha02"
+test-androidx-navigation = { module = "androidx.navigation:navigation-testing", version.ref = "androidxnavigation" }
+
+# pending use
+
+# unconfirmed
+
+compose-ui-util = { module = "androidx.compose.ui:ui-util", version.ref = "compose" }
+compose-ui-tooling = { module = "androidx.compose.ui:ui-tooling", version.ref = "compose" }
+compose-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview", version.ref = "compose" }
+test-compose-ui-junit4 = { module = "androidx.compose.ui:ui-test-junit4", version.ref = "compose" }
+test-compose-ui-manifest = { module = "androidx.compose.ui:ui-test-manifest", version.ref = "compose" }
+compose-foundation-foundation = { module = "androidx.compose.foundation:foundation", version.ref = "compose" }
+compose-foundation-layout = { module = "androidx.compose.foundation:foundation-layout", version.ref = "compose" }
+#compose-material-iconsext = { module = "androidx.compose.material:material-icons-extended", version.ref = "compose" }
+compose-animation-animation = { module = "androidx.compose.animation:animation", version.ref = "compose" }
+
+snapper = "dev.chrisbanes.snapper:snapper:0.2.2"
+
+gradleMavenPublishPlugin = "com.vanniktech:gradle-maven-publish-plugin:0.17.0"
+metalavaGradle = "me.tylerbwong.gradle:metalava-gradle:0.1.9"
+
+glide = "com.github.bumptech.glide:glide:4.12.0"
+
+kotlin-stdlib = { module = "org.jetbrains.kotlin:kotlin-stdlib", version.ref = "kotlin" }
+kotlin-stdlibJdk8 = { module = "org.jetbrains.kotlin:kotlin-stdlib-jdk8", version.ref = "kotlin" }
+kotlin-reflect = { module = "org.jetbrains.kotlin:kotlin-reflect", version.ref = "kotlin" }
+kotlin-metadataJvm = "org.jetbrains.kotlinx:kotlinx-metadata-jvm:0.3.0"
+
+kotlin-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "coroutines" }
+kotlin-coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "coroutines" }
+
+dokka = "org.jetbrains.dokka:dokka-gradle-plugin:1.5.0"
+
+okhttp-okhttp = { module = "com.squareup.okhttp3:okhttp", version.ref = "okhttp" }
+okhttp-mockWebServer = { module = "com.squareup.okhttp3:mockwebserver", version.ref = "okhttp" }
+
+coil = { module = "io.coil-kt:coil", version.ref = "coil" }
+coil-gif = { module = "io.coil-kt:coil-gif", version.ref = "coil" }
+coil-compose = { module = "io.coil-kt:coil-compose", version.ref = "coil" }
+
+androidx-appcompat = "androidx.appcompat:appcompat:1.4.2"
+androidx-fragment = "androidx.fragment:fragment-ktx:1.5.1"
+androidx-dynamicanimation = "androidx.dynamicanimation:dynamicanimation-ktx:1.0.0-alpha03"
+androidx-lifecycle-runtime = "androidx.lifecycle:lifecycle-runtime-ktx:2.5.1"
+androidx-lifecycle-viewmodel-compose = "androidx.lifecycle:lifecycle-viewmodel-compose:2.5.1"
+androidx-window = { module = "androidx.window:window", version.ref = "androidxWindow" }
+androidx-window-testing = { module = "androidx.window:window-testing", version.ref = "androidxWindow" }
+
+napier = "io.github.aakira:napier:1.4.1"
+
+test-androidx-runner = "androidx.test:runner:1.5.0-alpha04"
+test-androidx-rules = { module = "androidx.test:rules", version.ref = "androidxtest" }
+test-androidx-orchestrator = "androidx.test:orchestrator:1.4.1"
+test-androidx-uiAutomator = "androidx.test.uiautomator:uiautomator:2.2.0"
+
+# alpha for robolectric x compose fix
+test-androidx-espressoCore = "androidx.test.espresso:espresso-core:3.5.0-alpha07"
+test-androidx-espressoWeb = "androidx.test.espresso:espresso-web:3.5.0-alpha07"
+
+test-truth = "com.google.truth:truth:1.1.2"
+test-robolectric = "org.robolectric:robolectric:4.8"
+
+affectedmoduledetector = "com.dropbox.affectedmoduledetector:affectedmoduledetector:0.1.2"
+
+android-tools-lint-lint = { module = "com.android.tools.lint:lint", version.ref = "lintMinCompose" }
+android-tools-lint-api = { module = "com.android.tools.lint:lint-api", version.ref = "lintMinCompose" }
+android-tools-lint-tests = { module = "com.android.tools.lint:lint-tests", version.ref = "lintMinCompose" }
+
+squareup-mockwebserver = "com.squareup.okhttp3:mockwebserver:4.9.3"
+
+[bundles]
+navigation = ["compose-androidx-navigation", "accompanist-navigation", "dagger-hilt-navigation"]
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "gradlePlugin" }
+android-library = { id = "com.android.library", version.ref = "gradlePlugin" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+hilt-android = { id = "com.google.dagger.hilt.android", version.ref = "daggerHilt" }
+spotless = { id = "com.diffplug.spotless", version.ref = "spotless" }
+
